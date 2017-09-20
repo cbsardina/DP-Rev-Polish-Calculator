@@ -12,18 +12,18 @@ public class Main {
 
         ReversePolishCalc rpc = new ReversePolishCalc();
 
-        String rpnExpression = "2.5,4.8,+";
-        double expectedResult = 7.3;
-        double actualResult = rpc.calculate(rpnExpression);
-        checkResult(rpnExpression, expectedResult, actualResult);
+//        String rpnExpression = "2.5,4.8,+";
+//        double expectedResult = 7.3;
+//        double actualResult = rpc.calculate(rpnExpression);
+//        checkResult(rpnExpression, expectedResult, actualResult);
 
         // Write tests for the other operators (-, *, /)
 
-        // Uncomment this test which has many operators
-//        rpnExpression = "5,1,2,+,4,*,+,3,-";
-//        expectedResult = 14.0;
-//        actualResult = rpn.calculate(rpnExpression);
-//        checkResult(rpnExpression, expectedResult, actualResult);
+//         Uncomment this test which has many operators
+        String rpnExpression = "5,1,2,+,4,*,+,3,-";
+        double expectedResult = 14.0;
+        double actualResult = rpc.calculate(rpnExpression);
+        checkResult(rpnExpression, expectedResult, actualResult);
 
     }
 
