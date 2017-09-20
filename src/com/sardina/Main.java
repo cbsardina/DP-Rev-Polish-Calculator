@@ -1,10 +1,4 @@
 package com.sardina;
-/**
- * Test Driven Development (TDD)
- * Write your tests first and watch them fail.
- * Then write the algorithm and watch the tests pass.
- */
-
 
 public class Main {
 
@@ -12,19 +6,32 @@ public class Main {
 
         ReversePolishCalc rpc = new ReversePolishCalc();
 
-//        String rpnExpression = "2.5,4.8,+";
-//        double expectedResult = 7.3;
-//        double actualResult = rpc.calculate(rpnExpression);
-//        checkResult(rpnExpression, expectedResult, actualResult);
+        // Tests below
 
-        // Write tests for the other operators (-, *, /)
-
-//         Uncomment this test which has many operators
-        String rpnExpression = "5,1,2,+,4,*,+,3,-";
-        double expectedResult = 14.0;
+        String rpnExpression = "2.5,4.8,+";
+        double expectedResult = 7.3;
         double actualResult = rpc.calculate(rpnExpression);
         checkResult(rpnExpression, expectedResult, actualResult);
 
+        rpnExpression = "5,1,2,+,4,*,+,3,-";
+        expectedResult = 14.0;
+        actualResult = rpc.calculate(rpnExpression);
+        checkResult(rpnExpression, expectedResult, actualResult);
+
+        rpnExpression = "3,11,5,+,-";
+        expectedResult = -13.0;
+        actualResult = rpc.calculate(rpnExpression);
+        checkResult(rpnExpression, expectedResult, actualResult);
+
+        rpnExpression = "14,8,*,13,3,/,-";
+        expectedResult = 107.6666666666666666666667;
+        actualResult = rpc.calculate(rpnExpression);
+        checkResult(rpnExpression, expectedResult, actualResult);
+
+        rpnExpression = "7,50,10,/,*,4,-";
+        expectedResult = 31.0;
+        actualResult = rpc.calculate(rpnExpression);
+        checkResult(rpnExpression, expectedResult, actualResult);
     }
 
     private static void checkResult(String expression, double expected, double actual) {
