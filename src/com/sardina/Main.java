@@ -15,6 +15,8 @@ public class Main {
         String rpnExpression = "2.5,4.8,+";
         double expectedResult = 7.3;
         double actualResult = rpc.calculate(rpnExpression);
+            System.out.println(" ");
+            System.out.println("%%%%%% MAIN PAGE BELOW %%%%%");
         checkResult(rpnExpression, expectedResult, actualResult);
 
         // Write tests for the other operators (-, *, /)
